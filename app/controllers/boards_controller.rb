@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /boards
   def index

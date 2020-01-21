@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /cards
   def index
